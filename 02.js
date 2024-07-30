@@ -14,14 +14,14 @@ function getData(url) {
   });
 }
 
-async function run() {
+async function run(url) {
   try {
-    let ifTrue = await getData(API_URL);
+    let ifTrue = await getData(url);
     console.log(ifTrue);
-    let ifFalse = await getData(WRONG_URL);
   } catch (error) {
     console.log(error);
   }
 }
 
-run();
+run(API_URL);
+run(WRONG_URL);

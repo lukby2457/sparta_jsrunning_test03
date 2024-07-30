@@ -30,6 +30,12 @@
           img.src = data[0].url;
           imageContainer.appendChild(img);
         })
+
+      fetch(API_URL, options)
+        .then(async (Response) => {
+          const result = await Response.json();
+          console.log(result);
+        })
     </script>
   </body>
 </html>
